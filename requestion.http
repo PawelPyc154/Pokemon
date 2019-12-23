@@ -1,0 +1,1 @@
+GET http://localhost:3000/pokemon/?_page=1&_limit=10
