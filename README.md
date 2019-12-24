@@ -1,2 +1,3 @@
+
 npm run json-server.
-npm start .
+npm start.
