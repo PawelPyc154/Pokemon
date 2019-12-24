@@ -1,7 +1,10 @@
 
-npm i 
-npm i --production
+npm i .
+
+npm i --production .
+
 npm run json-server.
+
 npm start.
 
 
