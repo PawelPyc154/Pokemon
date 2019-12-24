@@ -10,14 +10,27 @@ function App() {
 
   useEffect(() => {
     dispatch(setLoadPokemon());
-  }, []);
+  }, [dispatch]);
 
   const pokemonsStore = useSelector((state) => state.pokemonReducer.pokemon);
   console.log(pokemonsStore);
 
   return (
-    <div className="App">
-      {pokemonsStore && pokemonsStore.map((pokemon) => <div key={pokemon.id}>{pokemon.id}</div>)}
+    <div className="Container">
+      {pokemonsStore &&
+        pokemonsStore.map((pokemon) => (
+          <div className="pokemonCard" key={pokemon.id}>
+            <img src={pokemon.img} alt="" />
+            <b>{`#${pokemon.num} ${pokemon.name}`}</b>
+            <div className="weaknessesContainer">
+              {pokemon.weaknesses.map((weaknesse) => (
+                <div key={weaknesse} className={`${weaknesse} weaknesseItem`}>
+                  {weaknesse}
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
     </div>
   );
 }

@@ -1,0 +1,100 @@
+.Container {
+    width: auto;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.pokemonCard {
+    border: 1px solid rgb(187, 186, 186);
+    border-radius: 5px;
+    padding: 20px 10px;
+    display: flex;
+
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.weaknessesContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.weaknesseItem {
+    border-radius: 3px;
+    margin: 3px;
+    padding: 0px 2px 1px;
+}
+
+.Fire {
+    background-color: #FF6649;
+}
+
+.Poison {
+    background-color: #AA57A0;
+}
+
+.Grass {
+    background-color: #97D957
+}
+
+.Flying {
+    background-color: #7DA8FC
+}
+
+.Water {
+    background-color: #58B2FC
+}
+
+.Ground {
+    background-color: rgb(107, 62, 41)
+}
+
+.Rock {
+    background-color: rgb(76, 91, 104)
+}
+
+.Electric {
+    background-color: rgb(252, 222, 88)
+}
+
+.Psychic {
+    background-color: rgb(243, 193, 28)
+}
+
+.Ice {
+    background-color: rgb(159, 205, 243)
+}
+
+.Fighting {
+    background-color: rgb(182, 115, 115)
+}
+
+.Fairy {
+    background-color: rgb(76, 202, 139)
+}
+
+.Bug {
+    background-color: rgb(88, 70, 58)
+}
+
+.Ghost {
+    background-color: rgb(124, 124, 124)
+}
+
+.Dark {
+    background-color: rgb(46, 46, 46)
+}
+
+.Steel {
+    background-color: rgb(90, 90, 90)
+}
