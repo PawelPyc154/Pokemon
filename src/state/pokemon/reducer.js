@@ -1,6 +1,6 @@
 import { LOAD_POKEMON } from './action';
 
-const pokemonsState = {};
+const pokemonsState = [];
 
 const pokemonReducer = (state = pokemonsState, action) => {
   switch (action.type) {

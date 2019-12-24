@@ -3,6 +3,5 @@
   "singleQuote": true,
   "trailingComma": "all",
   "arrowParens": "always",
-  "printWidth": 100,
-  "proseWrap": "never"
+  "printWidth": 80
 }

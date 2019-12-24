@@ -1,37 +1,18 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React from 'react';
 
-import './App.scss';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import { setLoadPokemon } from './state/pokemon/action';
+import Page from './Components/Page';
+import Pagination from './Components/Pagination';
 
 function App() {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(setLoadPokemon());
-  }, [dispatch]);
-
-  const pokemonsStore = useSelector((state) => state.pokemonReducer.pokemon);
-  console.log(pokemonsStore);
-
   return (
-    <div className="Container">
-      {pokemonsStore &&
-        pokemonsStore.map((pokemon) => (
-          <div className="pokemonCard" key={pokemon.id}>
-            <img src={pokemon.img} alt="" />
-            <b>{`#${pokemon.num} ${pokemon.name}`}</b>
-            <div className="weaknessesContainer">
-              {pokemon.weaknesses.map((weaknesse) => (
-                <div key={weaknesse} className={`${weaknesse} weaknesseItem`}>
-                  {weaknesse}
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
-    </div>
+    <Router>
+      {/* <Switch> */}
+      <Route path="/:page" component={Pagination} />
+      <Route path="/:page" component={Page} />
+      {/* </Switch> */}
+    </Router>
   );
 }
 
